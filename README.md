@@ -7,3 +7,7 @@
 2. 复制.vimrc文件 到~/.vimrc
 3. 执行`vim ~/.vimrc`打开vim的配置文件，然后进入命令默认，执行插件安装`:PluginInstall`
 
+# 支持的功能
+
+### 1. mip
+获取当前网络ip地址
