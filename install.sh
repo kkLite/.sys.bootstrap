@@ -2,10 +2,10 @@
 function hasInstall_oh_my_zsh() {
   if [ ! -d "$HOME/.oh-my-zsh" ]; then
        echo 'oh-my-zsh 没有安装, 自动安装中...'
-       return 0
+       return 1 
    else
        echo 'oh-my-zsh 已经安装了'
-       return 1
+       return 0 
    fi
 }
 
