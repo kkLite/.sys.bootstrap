@@ -14,6 +14,7 @@ plugins=(
   sublime
   vscode
   git-open
+  zsh-syntax-highlighting
 )
 # 设置zsh的目录
 ZSH=$HOME/.oh-my-zsh
@@ -53,8 +54,5 @@ export PATH=$PATH:$GOBIN
 export PATH="$HOME/.fastlane/bin:$PATH"
 
 # 命令高亮插件相关配置
-source /usr/local/Cellar/zsh-syntax-highlighting/0.6.0/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey ',' autosuggest-accept
-# scmpuff 插件的配置和启动
-eval "$(scmpuff init -s)"
 

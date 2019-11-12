@@ -1,9 +1,21 @@
+# 判断是否安装了oh my zsh
+function hasInstall_oh_my_zsh() {
+  if [ ! -d "$HOME/.oh-my-zsh" ]; then
+       echo 'oh-my-zsh 没有安装, 自动安装中...'
+       return 1 
+   else
+       echo 'oh-my-zsh 已经安装了'
+       return 0 
+   fi
+}
+
 hasInstall_oh_my_zsh 
-if [$? -gt 0]; then
+if [ $? -gt 0 ]; then
     sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 fi 
 
-if [$? -eq 0]
+if [ $? -eq 0 ]
 then
 #1. 安装diff辅助工具 https://github.com/jeffkaufman/icdiff
 pip install git+https://github.com/jeffkaufman/icdiff.git
@@ -12,17 +24,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 brew install autojump
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# 安装git-open 插件
+git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
 
 fi
 
-# 判断是否安装了oh my zsh
- function hasInstall_oh_my_zsh() {
-   if [ ! -d "$HOME/.oh-my-zsh" ]; then
-        echo 'oh-my-zsh 没有安装, 自动安装中...'
-        return 0
-    else
-        echo 'oh-my-zsh 已经安装了'
-        return 1
-    fi
- }
 
