@@ -6,3 +6,9 @@ function hasInstall_oh_my_zsh() {
     fi
 }
 hasInstall_oh_my_zsh
+if [ $? -gt 0 ]
+then 
+    echo 'haha'
+else
+    echo 'oooo'
+fi 
