@@ -24,6 +24,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 brew install autojump
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# 安装git-open 插件
+git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
+
 fi
 
 
